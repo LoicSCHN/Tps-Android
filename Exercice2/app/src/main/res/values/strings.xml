@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name" translatable="false">Exercice2</string>
+    <string name="prenom">Prenom</string>
+    <string name="tel">Tel</string>
+    <string name="nom">Nom</string>
+    <string name="domaine_de_comp_tence">Domaine de compétence</string>
+    <string name="age">Age</string>
+</resources>

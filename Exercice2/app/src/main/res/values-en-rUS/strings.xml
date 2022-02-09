@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="prenom">Name</string>
+    <string name="tel">phone</string>
+    <string name="nom">Name</string>
+    <string name="domaine_de_comp_tence">skills</string>
+    <string name="age">age</string>
+</resources>
