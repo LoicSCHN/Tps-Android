@@ -3,8 +3,11 @@ package com.example.calendrier;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.widget.CalendarView;
 
 public class MainActivity extends AppCompatActivity {
+    CalendarView cal;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

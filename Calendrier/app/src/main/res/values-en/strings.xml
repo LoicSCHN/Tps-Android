@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Calendrier</string>
+    <string name="ajouter_un_event">add_event</string>
+    <string name="ajouter_un_ev_nement">add_event</string>
+</resources>

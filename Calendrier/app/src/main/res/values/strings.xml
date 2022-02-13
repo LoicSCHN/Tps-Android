@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Calendrier</string>
+    <string name="ajouter_un_event">Ajouter un event...</string>
+    <string name="ajouter_un_ev_nement">Ajouter un evènement :</string>
 </resources>
