@@ -25,11 +25,7 @@ import java.util.Calendar;
 import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
-    Evenement[] voyages;
-    Evenement[] voy;
-    ArrayList<Evenement> VoyageList;
-    ArrayAdapter<Evenement> arrayAdapter;
-    //Essayer de faire avec une message box comme début du tp
+
 
 
     CalendarView cal;
@@ -43,7 +39,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        createEvent();
         cal = findViewById(R.id.calendarView);
 
         //J'affiche le jour sélectionné dans le calendrier
@@ -77,8 +72,4 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-
-    public void  createEvent(){
-        //Evenement e1 = new Evenement("Faire les courses", )
-    }
 }
