@@ -40,18 +40,45 @@ public class MainActivity extends AppCompatActivity {
         exo7 = findViewById(R.id.exo7);
         exos = new Button[]{exo1, exo2 , exo3, exo4, exo5, exo6, exo7};
 
-        for (Button b : exos){
-            b.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Intent i1 = new Intent(MainActivity.this, Exos.class);
+        exo1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i1 = new Intent(MainActivity.this, exo1.class);
+                startActivity(i1);
+            }
+        });
 
-                    i1.putExtra(MESSAGE_EXO, b.getText().toString());
+        exo2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i2 = new Intent(MainActivity.this, exo2.class);
+                startActivity(i2);
+            }
+        });
 
-                    startActivity(i1);
-                }
-            });
-        }
+        exo3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i3 = new Intent(MainActivity.this, exo3.class);
+                startActivity(i3);
+            }
+        });
+
+        exo4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i4 = new Intent(MainActivity.this, exo4.class);
+                startActivity(i4);
+            }
+        });
+
+        exo5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i5 = new Intent(MainActivity.this, exo5.class);
+                startActivity(i5);
+            }
+        });
 
     }
 

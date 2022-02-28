@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.hardware.Sensor;
 import android.hardware.SensorManager;
 import android.os.Bundle;
@@ -17,7 +18,11 @@ import java.util.List;
 public class Exos extends AppCompatActivity {
     TextView titreExo;
     String exo;
-    private SensorManager mSensorManager;
+
+    TextView capteur1;
+    TextView capteur2;
+    TextView capteur3;
+
     private SensorManager sensorManager;
     List<Sensor> sensorsList;
     ListView listSensor;
@@ -28,14 +33,14 @@ public class Exos extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exos);
-        //titreExo = findViewById(R.id.titreExo);
+
+
         titreExo = new TextView(this);
         final Intent intent = getIntent();
-        exo = intent.getStringExtra(MainActivity.MESSAGE_EXO);
-        titreExo.setText(exo.toString());
+        //exo = intent.getStringExtra(MainActivity.MESSAGE_EXO);
+        titreExo.setText("Exercice 1");
         titreExo.setPadding(10,10,10,10);
 
-        mSensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
         sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
         sensorsList = sensorManager.getSensorList(Sensor.TYPE_ALL);
 
@@ -74,6 +79,7 @@ public class Exos extends AppCompatActivity {
         layout.addView(listSensor);
 
         setContentView(layout);
+        
 
         List<Sensor> sensors = sensorManager.getSensorList(Sensor.TYPE_ALL);
         StringBuffer sensorDesc = new StringBuffer();
@@ -98,7 +104,47 @@ public class Exos extends AppCompatActivity {
         listSensor.setAdapter(arrayAdapter);
     }
     private void exO2() {
+
+         capteur1 = new TextView(this);
+         capteur2 = new TextView(this);
+         capteur3 = new TextView(this);
+
+        layout.addView(capteur1);
+        layout.addView(capteur2);
+        layout.addView(capteur2);
         setContentView(layout);
+
+        if(sensorManager.getDefaultSensor(Sensor.TYPE_HEART_BEAT) != null){
+            capteur1.setText("le Capteur de fréquence cardiaque est présent");
+            capteur1.setBackgroundColor(Color.GREEN);
+
+        }else{
+            capteur1.setText("le Capteur de fréquence cardiaque n'est pas présent");
+            capteur1.setBackgroundColor(Color.RED);
+
+        }
+
+        if(sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER) != null){
+            capteur2.setText("le Capteur d'accélération est présent");
+            capteur2.setBackgroundColor(Color.GREEN);
+
+        }else{
+            capteur2.setText("le Capteur d'accélération n'est pas présent");
+            capteur2.setBackgroundColor(Color.RED);
+
+        }
+
+        if(sensorManager.getDefaultSensor(Sensor.TYPE_GRAVITY) != null){
+            capteur3.setText("le Capteur de gravité est présent");
+            capteur3.setBackgroundColor(Color.GREEN);
+
+        }else{
+            capteur3.setText("le Capteur de gravité n'est pas présent");
+            capteur3.setBackgroundColor(Color.RED);
+
+        }
+
+
     }
     private void exO3() {
         setContentView(layout);

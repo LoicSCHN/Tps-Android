@@ -10,6 +10,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TP2">
         <activity
+            android:name=".exo5"
+            android:exported="false" />
+        <activity
+            android:name=".exo4"
+            android:exported="false" />
+        <activity
+            android:name=".exo3"
+            android:exported="false" />
+        <activity
+            android:name=".exo2"
+            android:exported="false" />
+        <activity
+            android:name=".exo1"
+            android:exported="false" />
+        <activity
             android:name=".Exos"
             android:exported="false" />
         <activity
