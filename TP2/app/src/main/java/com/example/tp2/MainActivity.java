@@ -80,6 +80,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        exo7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i7 = new Intent(MainActivity.this, exo7.class);
+                startActivity(i7);
+            }
+        });
+
     }
 
 
