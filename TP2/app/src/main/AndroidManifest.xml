@@ -25,9 +25,6 @@
             android:name=".exo1"
             android:exported="false" />
         <activity
-            android:name=".Exos"
-            android:exported="false" />
-        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
